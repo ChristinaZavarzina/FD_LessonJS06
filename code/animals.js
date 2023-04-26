@@ -85,8 +85,11 @@ animal.eat();
 console.log(animal);
 
 Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
 Cat.prototype = Object.create(Animal.prototype);
+Cat.prototype.constructor = Cat;
 Horse.prototype = Object.create(Animal.prototype);
+Horse.prototype.constructor = Horse;
 
 const dog = new Dog('dried food', 'Kiev', '#ba9563', 'Rain', 'spaniel');
 const cat = new Cat('sterilised food', 'Kiev', 'leopard', 'Deni', 'bengal');
